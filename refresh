@@ -1,0 +1,26 @@
+Nothing to migrate.
+Seeding: MenusTableSeeder
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'access' in 'field list' (SQL: insert into `menus` (`name`, `slug`, `parent`, `order`, `url`, `icon`, `client`, `access`, `updated_at`, `created_at`) values (Dasboard, dashboard, 0, 0, admin, tachometer, admin, , 2020-03-20 19:28:23, 2020-03-20 19:28:23))
+
+  at C:\laragon\www\dynamic-menu\vendor\laravel\framework\src\Illuminate\Database\Connection.php:669
+    665|         // If an exception occurs when attempting to run a query, we'll format the error
+    666|         // message to include the bindings with SQL, which will make this exception a
+    667|         // lot more helpful to the developer instead of just the database's errors.
+    668|         catch (Exception $e) {
+  > 669|             throw new QueryException(
+    670|                 $query, $this->prepareBindings($bindings), $e
+    671|             );
+    672|         }
+    673|
+
+  • A column was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+  1   C:\laragon\www\dynamic-menu\vendor\laravel\framework\src\Illuminate\Database\Connection.php:457
+      PDOException::("SQLSTATE[42S22]: Column not found: 1054 Unknown column 'access' in 'field list'")
+
+  2   C:\laragon\www\dynamic-menu\vendor\laravel\framework\src\Illuminate\Database\Connection.php:457
+      PDO::prepare("insert into `menus` (`name`, `slug`, `parent`, `order`, `url`, `icon`, `client`, `access`, `updated_at`, `created_at`) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")

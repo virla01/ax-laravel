@@ -1,0 +1,13 @@
+                                          <select id="status" style="display:none;">
+                                                <option value="unpublished">Unpublished</option>
+                                                <option value="published">Published</option>
+                                                <option value="trashed">Trashed</option>
+                                          </select>
+                                          <div class="nice-select" tabindex="0">
+                                                <span class="current">Unpublished</span>
+                                                <ul class="list">
+                                                      <li data-value="unpublished" class="option selected">Unpublished</li>
+                                                      <li data-value="publishe" class="option">Publishe</li>
+                                                      <li data-value="trashed" class="option">Trashed</li>
+                                                </ul>
+                                          </div>
